@@ -1,359 +1,130 @@
-/* ==========================================================================
-   REAPER — BLOOD GLASS (Apple-like Halloween) 
-   Theme for TeamSpeak 6
-   Elegant glassmorphism, rounded shapes, deep blood red accents
-   ========================================================================== */
+/* === Reaper Glass Apple-like Halloween Theme === */
+/* by ChatGPT (GPT-5) — pour TS6 */
 
-/* ------------------------------
-   CORE PALETTE & SIZING
-   ------------------------------ */
-:root, ::before, ::after {
-  /* Primary action reds */
-  --reaper-red-1: #b71c1c !important;           /* Accent lumineux (active) */
-  --reaper-red-2: #8b0000 !important;           /* Base sombre (principal) */
-  --reaper-red-3: #5a0000 !important;           /* Ombres profondes */
-  --reaper-red-glow: rgba(183, 28, 28, 0.22) !important;
-  --reaper-red-glow-strong: rgba(183, 28, 28, 0.35) !important;
-
-  /* Neutral darks for backgrounds */
-  --bg-00: #070707 !important;                  /* presque noir */
-  --bg-10: #0f0f10 !important;                  
-  --bg-20: #171718 !important;                  
-  --bg-30: rgba(23, 23, 24, 0.65) !important;   /* glass layer */
-
-  /* Text */
-  --text-primary: #e8e8ea !important;
-  --text-secondary: #bdbdbf !important;
-  --muted: #8f8f92 !important;
-
-  /* Borders / separators */
-  --border-soft: rgba(255,255,255,0.04) !important;
-  --border-strong: rgba(255,255,255,0.06) !important;
-
-  /* Radii & sizes */
-  --radius-sm: 8px !important;
-  --radius-md: 12px !important;
-  --radius-lg: 18px !important;
-  --control-height: 44px !important;
-  --glass-blur: 10px !important;
-  --glass-blur-strong: 16px !important;
-}
-
-/* Convenience override for TS variables that exist in some themes */
 :root {
-  --teamspeak-blue: var(--reaper-red-2) !important;
-  --tsv-bg: var(--bg-00) !important;
-  --tsv-shaded-bg: var(--bg-10) !important;
-  --tsv-contrast-bg: var(--bg-30) !important;
-  --tsv-font-color: var(--text-primary) !important;
-  --tsv-font-subtitle-color: var(--text-secondary) !important;
-  --tsv-button-filled-bg: var(--reaper-red-2) !important;
-  --tsv-button-filled-hover-bg: var(--reaper-red-1) !important;
+  --glass-bg: rgba(10, 10, 12, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --accent: #b30026;
+  --accent-glow: rgba(255, 0, 40, 0.35);
+  --text-primary: #f2f2f2;
+  --text-secondary: #999;
+  --surface-dark: rgba(0, 0, 0, 0.65);
 }
 
-/* ==========================================================================
-   GLOBAL LAYOUT
-   ========================================================================== */
-* {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* === GLOBAL === */
+body {
+  background: radial-gradient(circle at 20% 20%, #0a0a0d 0%, #050506 100%);
+  color: var(--text-primary);
+  font-family: "SF Pro Display", "Inter", sans-serif;
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
 }
 
-html, body, #app, .app-root {
-  background: linear-gradient(180deg, var(--bg-00) 0%, #0a0a0b 100%) !important;
-  color: var(--text-primary) !important;
-  font-family: "SF Pro Text", "Inter", "Segoe UI", Roboto, system-ui, sans-serif !important;
+/* === PANELS & CARDS === */
+.container,
+.panel,
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* A general glass container used for panels */
-.reaper-glass {
-  backdrop-filter: blur(var(--glass-blur)) saturate(110%) !important;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)) !important;
-  border: 1px solid var(--border-soft) !important;
-  border-radius: var(--radius-md) !important;
-  box-shadow: 0 6px 30px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.35) inset !important;
+/* === SIDEBAR === */
+.sidebar {
+  background: linear-gradient(180deg, rgba(15, 15, 20, 0.85), rgba(5, 5, 8, 0.95));
+  border-right: 1px solid var(--glass-border);
 }
 
-/* ==========================================================================
-   SIDEBAR / SERVER TREE
-   ========================================================================== */
-.tsv-sidebar, .tsv-server-list, .ts-sidebar {
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)) !important;
-  border-right: 1px solid var(--border-strong) !important;
-  padding: 14px !important;
+.sidebar .item:hover,
+.sidebar .item.active {
+  background: linear-gradient(90deg, var(--accent) 0%, #8a001b 100%);
+  box-shadow: 0 0 12px var(--accent-glow);
+  transition: all 0.25s ease;
 }
 
-/* Server item card */
-.ts-server-tree-item, .ts-server-tree-item-leaf, .tsv-server-item {
-  border-radius: var(--radius-sm) !important;
-  padding: 8px 10px !important;
-  margin: 6px 0 !important;
-  transition: all .18s cubic-bezier(.2,.9,.3,1) !important;
+/* === CHAT AREA === */
+.chat-container {
+  background: rgba(8, 8, 10, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 22px;
 }
 
-/* Active / hover state: soft red glow + left pill */
-.ts-server-tree-item:hover, .ts-server-tree-item.tsv-active, .ts-server-tree-item.tsv-selected {
-  background: linear-gradient(90deg, rgba(183,28,28,0.04), transparent 60%) !important;
-  box-shadow: 0 6px 18px rgba(183,28,28,0.03) !important;
-  transform: translateY(-1px) !important;
-  border-left: 4px solid var(--reaper-red-1) !important;
-  padding-left: 8px !important;
+.message {
+  background: rgba(18, 18, 22, 0.5);
+  border-left: 2px solid transparent;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: border-color 0.3s ease;
 }
 
-/* Sidebar icons become tinted and slightly scaled */
-.tsv-icon svg path, .tsv-icon svg {
-  transition: transform .18s ease, filter .18s ease !important;
-}
-.ts-server-tree-item:hover .tsv-icon svg, .ts-server-tree-item.tsv-active .tsv-icon svg {
-  transform: scale(1.08) !important;
-  filter: drop-shadow(0 4px 12px var(--reaper-red-glow)) !important;
-  fill: var(--reaper-red-1) !important;
+.message:hover {
+  border-left: 2px solid var(--accent);
+  background: rgba(18, 18, 22, 0.65);
 }
 
-/* ==========================================================================
-   HEADER / BREADCRUMBS / TITLE BARS
-   ========================================================================== */
-.tsv-header, .tsv-view-header, .tsv-server-header {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)) !important;
-  border-bottom: 1px solid var(--border-strong) !important;
-  padding: 10px 16px !important;
-  border-radius: 0 0 var(--radius-md) var(--radius-md) !important;
+/* === INPUT & BUTTONS === */
+input,
+textarea {
+  background: rgba(20, 20, 25, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  color: var(--text-primary);
+  border-radius: 14px;
+  transition: all 0.3s ease;
 }
 
-/* Small header accent — subtle red glass bar */
-.tsv-header::after, .tsv-view-header::after {
-  content: "" !important;
-  display: block !important;
-  height: 3px !important;
-  width: 100% !important;
-  border-radius: 0 0 6px 6px !important;
-  background: linear-gradient(90deg, transparent, var(--reaper-red-glow), transparent) !important;
-  opacity: .9 !important;
-  margin-top: 8px !important;
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+  background: rgba(20, 20, 25, 0.6);
 }
 
-/* ==========================================================================
-   CHAT / MESSAGES
-   ========================================================================== */
-.ts-chat-area, .tsv-chat {
-  background: transparent !important;
-  padding: 16px !important;
+button {
+  background: linear-gradient(135deg, var(--accent) 0%, #720018 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 6px 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* Chat input container — very round and glassy */
-.ts-chat-input-container, .ts-chat-input, .tsv-chat-input {
-  height: var(--control-height) !important;
-  border-radius: var(--radius-lg) !important;
-  padding: 10px 14px !important;
-  border: 1px solid var(--border-soft) !important;
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.006)) !important;
-  backdrop-filter: blur(var(--glass-blur)) !important;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.6) !important;
-  color: var(--text-primary) !important;
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px var(--accent-glow);
 }
 
-/* Focused input — red glow ring */
-.ts-chat-input-container:focus-within, .ts-chat-input-container.focus {
-  border-color: rgba(183,28,28,0.8) !important;
-  box-shadow: 0 0 26px var(--reaper-red-glow-strong) !important;
-  transform: translateY(-1px) !important;
-}
-
-/* Message bubbles — soft rounded, subtle glass */
-.ts-chat-message, .ts-chat-bubble, .tsv-message-bubble {
-  border-radius: 14px !important;
-  padding: 10px 12px !important;
-  margin: 8px 0 !important;
-  background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.006)) !important;
-  border: 1px solid rgba(255,255,255,0.02) !important;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.55) inset !important;
-  color: var(--text-primary) !important;
-}
-
-/* Mentions / highlights */
-.ts-chat-message.mention, .tsv-message-highlight {
-  background: linear-gradient(180deg, rgba(183,28,28,0.06), rgba(139,0,0,0.02)) !important;
-  border-left: 3px solid var(--reaper-red-1) !important;
-  box-shadow: 0 0 18px var(--reaper-red-glow) !important;
-}
-
-/* Timestamps & secondary text */
-.ts-chat-time, .tsv-message-meta {
-  color: var(--muted) !important;
-  font-size: 12px !important;
-}
-
-/* Image thumbnails inside chat — rounded and framed */
-.ts-chat-attachment img, .tsv-file-preview img {
-  border-radius: 12px !important;
-  border: 1px solid var(--border-soft) !important;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.65) !important;
-}
-
-/* ==========================================================================
-   BUTTONS / CTA
-   ========================================================================== */
-.tsv-button-filled, .tsv-button-hero, .ts-button-primary {
-  height: var(--control-height) !important;
-  min-width: 96px !important;
-  padding: 8px 18px !important;
-  border-radius: var(--radius-lg) !important;
-  background: linear-gradient(160deg, var(--reaper-red-1), var(--reaper-red-2)) !important;
-  border: 1px solid rgba(255,255,255,0.02) !important;
-  color: var(--text-primary) !important;
-  box-shadow: 0 8px 30px var(--reaper-red-glow) !important;
-  transition: transform .12s ease, box-shadow .12s ease !important;
-}
-
-/* Slight lift and brighter on hover */
-.tsv-button-filled:hover, .tsv-button-hero:hover {
-  transform: translateY(-3px) scale(1.01) !important;
-  box-shadow: 0 18px 44px var(--reaper-red-glow-strong) !important;
-  background: linear-gradient(160deg, var(--reaper-red-1), var(--reaper-red-1)) !important;
-}
-
-/* Secondary buttons */
-.tsv-button, .ts-secondary {
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)) !important;
-  border: 1px solid var(--border-soft) !important;
-  color: var(--text-secondary) !important;
-  border-radius: var(--radius-md) !important;
-}
-
-/* Icon buttons — circular, with subtle background */
-.tsv-icon-button, .ts-round-btn {
-  width: 44px !important;
-  height: 44px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  border-radius: 50% !important;
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)) !important;
-  border: 1px solid var(--border-soft) !important;
-}
-
-/* ==========================================================================
-   AVATARS / PRESENCE / TALKING
-   ==========================================================================
-   Pulsing red ring for talking users, fully rounded avatars.
-*/
-.avatar, .tsv-avatar, .user-avatar {
-  border-radius: 50% !important;
-  overflow: hidden !important;
-  border: 2px solid rgba(255,255,255,0.03) !important;
-  box-shadow: 0 6px 26px rgba(0,0,0,0.6) inset !important;
-}
-
-/* Talking animation */
-.talking .avatar, .is-speaking .avatar {
-  border: 2px solid var(--reaper-red-1) !important;
-  box-shadow: 0 0 22px var(--reaper-red-glow), inset 0 0 6px rgba(255,255,255,0.02) !important;
-  animation: reaper-pulse 1.6s infinite ease-out !important;
-}
-@keyframes reaper-pulse {
-  0% { box-shadow: 0 0 10px rgba(183,28,28,0.12), inset 0 0 6px rgba(255,255,255,0.02); transform: scale(1); }
-  50% { box-shadow: 0 0 26px var(--reaper-red-glow-strong), inset 0 0 10px rgba(255,255,255,0.03); transform: scale(1.04); }
-  100% { box-shadow: 0 0 10px rgba(183,28,28,0.12), inset 0 0 6px rgba(255,255,255,0.02); transform: scale(1); }
-}
-
-/* ==========================================================================
-   MODALS / DIALOGS
-   ========================================================================== */
-.reaper-modal, .tsv-modal, .dialog {
-  width: min(720px, 92%) !important;
-  border-radius: var(--radius-lg) !important;
-  padding: 20px !important;
-  background: linear-gradient(180deg, rgba(10,10,10,0.76), rgba(10,10,10,0.66)) !important;
-  border: 1px solid rgba(255,255,255,0.03) !important;
-  box-shadow: 0 40px 120px rgba(0,0,0,0.75), 0 0 80px rgba(183,28,28,0.06) !important;
-}
-
-/* Modal header accent */
-.reaper-modal .modal-header {
-  display: flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  padding-bottom: 8px !important;
-  border-bottom: 1px solid var(--border-strong) !important;
-}
-
-/* ==========================================================================
-   TOOLTIP / TOASTS
-   ========================================================================== */
-.tsv-tooltip, .ts-toast {
-  background: rgba(10,10,10,0.9) !important;
-  border-radius: 10px !important;
-  padding: 8px 12px !important;
-  color: var(--text-primary) !important;
-  font-size: 13px !important;
-  border: 1px solid rgba(255,255,255,0.03) !important;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6) !important;
-}
-
-/* Error / destructive toast — blood glass */
-.ts-toast--error {
-  background: linear-gradient(160deg, rgba(139,0,0,0.12), rgba(183,28,28,0.06)) !important;
-  border-left: 4px solid var(--reaper-red-1) !important;
-  box-shadow: 0 18px 40px var(--reaper-red-glow-strong) !important;
-}
-
-/* ==========================================================================
-   SCROLLBARS (webkit-based clients) — rounded, red gradient thumb
-   ========================================================================== */
+/* === SCROLLBAR === */
 ::-webkit-scrollbar {
-  width: 10px !important;
-  height: 10px !important;
+  width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-  border-radius: 999px !important;
-  background: linear-gradient(180deg, var(--reaper-red-1), var(--reaper-red-2)) !important;
-  border: 2px solid rgba(0,0,0,0.45) !important;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.6) inset !important;
-}
-::-webkit-scrollbar-track {
-  background: transparent !important;
+  background: linear-gradient(var(--accent), #5a0013);
+  border-radius: 8px;
 }
 
-/* ==========================================================================
-   SMALL RESPONSIVE / ACCESSIBILITY TWEAKS
-   ========================================================================== */
-@media (max-width: 980px) {
-  .ts-sidebar, .tsv-sidebar { padding: 10px !important; }
-  .ts-chat-input-container { height: 40px !important; }
+/* === USERLIST & CHANNELS === */
+.userlist-item:hover,
+.channel-item:hover {
+  background: rgba(255, 0, 40, 0.08);
+  border-left: 2px solid var(--accent);
+  transition: all 0.3s ease;
 }
 
-/* Ensure high-contrast mode stays legible */
-@media (prefers-contrast: more) {
-  .ts-chat-message, .tsv-message-bubble { border: 1px solid rgba(255,255,255,0.06) !important; }
+/* === FOOTER === */
+.footer {
+  background: rgba(0, 0, 0, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.6);
 }
 
-/* ==========================================================================
-   CLEANUPS / HIDE NOISE
-   ========================================================================== */
-/* Hide default community banners or excessive branding if present */
-.ts-start-community-banner,
-.ts-community-promo,
-.ts-join-community {
-  display: none !important;
+/* === GLOW EFFECT (for highlights) === */
+.glow {
+  text-shadow: 0 0 8px var(--accent-glow);
 }
-
-/* If any built-in blue accent still leaks, force red variant */
-[class*="accent"], [class*="primary"], [style*="--primary"], .accent--blue {
-  color: var(--reaper-red-1) !important;
-  background: linear-gradient(160deg, var(--reaper-red-1), var(--reaper-red-2)) !important;
-  border-color: rgba(183,28,28,0.2) !important;
-}
-
-/* ==========================================================================
-   END OF THEME
-   ========================================================================== */
-
-/* Optional: small helper to quickly toggle stronger glass in some panels:
-   add class .reaper-glass-strong to element to get extra blur + sheen */
-.reaper-glass-strong {
-  backdrop-filter: blur(var(--glass-blur-strong)) saturate(120%) !important;
-  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.006)) !important;
-  border: 1px solid rgba(255,255,255,0.035) !important;
-  box-shadow: 0 30px 90px rgba(0,0,0,0.75), 0 0 46px var(--reaper-red-glow-strong) !important;
-}
+/* End of Reaper.css */
