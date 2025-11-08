@@ -11,7 +11,7 @@
         "directory": "reaper",
         "type": "git"
     },
-    "image": "Thumbnail.png.png",
+    "image": "Thumbnail.png",
     "license": "MIT",
     "author": {
         "name": "Valhalla",
