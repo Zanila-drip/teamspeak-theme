@@ -1,28 +1,27 @@
 {
-    "name": "Example Theme",
-    "description": "This is an example theme, making everything purple",
+    "name": "Neon Reaper Dark Theme",
+    "description": "A dark theme with neon accents for TeamSpeak.",
     "version": "1.0.0",
     "identifier": "neon.reaper.dark",
     "engines": {
         "teamspeak": 1
     },
     "repository": {
-        "url": "https://github.com/bestDudeEver/themes/",
-        "directory": "purple",
+        "url": "https://github.com/AnthonyDac/reaper",
+        "directory": "reaper",
         "type": "git"
     },
-    "image": "preview.png",
+    "image": "Thumbnail.png.png",
     "license": "MIT",
     "author": {
-        "name": "Joe Doe",
-        "email": "joe@example.net",
-        "url": "https://example.net",
+        "name": "Valhalla",
+        "email": "anthony.dac@hotmail.fr",
         "userTag": "TeamSpeak@myteamspeak.com"
     },
     "content": {
         "themes": [
             {
-                "name": "Purple Theme",
+                "name": "Reaper Theme",
                 "source": "Reaper.css",
                 "image": "Reaper.png",
                 "apiVersion": 1
