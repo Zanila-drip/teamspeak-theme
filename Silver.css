@@ -4,16 +4,11 @@
 :root,
 ::after,
 ::before {
-    
-    /* Silver theme accents (cool neutral) */
      --custom-color-accent-light: #C0C6CC;
-    /* light silver */
      --custom-color-accent-dark: #8E9499;
-    /* medium grey-silver */
      --custom-color-accent-light-t: rgba(192, 198, 204, 0.5);
      --custom-color-accent-dark-t: rgba(142, 148, 153, 0.5);
      --custom-color-slider1: #C0C6CC;
      --custom-color-slider2: #E0E4E7;
-    
 }
 

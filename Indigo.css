@@ -4,13 +4,9 @@
 :root,
 ::after,
 ::before {
-    
-    /* Indigo theme accents */
      --custom-color-accent-light: #5E5CE6;
-    /* iOS indigo */
-     --custom-color-accent-dark: #3D3BB3;
-    /* deeper indigo */
-     --custom-color-accent-light-t: rgba(94, 92, 230, 0.5);
+    --custom-color-accent-dark: #3D3BB3;
+    --custom-color-accent-light-t: rgba(94, 92, 230, 0.5);
      --custom-color-accent-dark-t: rgba(61, 59, 179, 0.5);
      --custom-color-slider1: #5E5CE6;
      --custom-color-slider2: #8E8CFF;

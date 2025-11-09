@@ -2,13 +2,10 @@
 @import url(Glassmorphism.css);
 
 :root, ::after, ::before {
-    /* Blue theme accents (Apple-like) */
-    --custom-color-accent-light: #0A84FF; /* iOS System Blue */
-    --custom-color-accent-dark: #0066FF;  /* deeper blue for contrast */
+    --custom-color-accent-light: #0A84FF;
+    --custom-color-accent-dark: #0066FF;
     --custom-color-accent-light-t: rgba(10, 132, 255, 0.5);
     --custom-color-accent-dark-t: rgba(0, 102, 255, 0.5);
-
-    /* Sliders gradient pairing (blue -> light cyan) */
     --custom-color-slider1: #0A84FF;
     --custom-color-slider2: #64D2FF;
 }

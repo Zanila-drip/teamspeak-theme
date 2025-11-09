@@ -4,16 +4,11 @@
 :root,
 ::after,
 ::before {
-    
-    /* Magenta theme accents */
      --custom-color-accent-light: #FF0D89;
-    /* vibrant magenta */
      --custom-color-accent-dark: #C30064;
-    /* deeper magenta */
      --custom-color-accent-light-t: rgba(255, 13, 137, 0.5);
      --custom-color-accent-dark-t: rgba(195, 0, 100, 0.5);
      --custom-color-slider1: #FF0D89;
      --custom-color-slider2: #FF5FB3;
-    
 }
 

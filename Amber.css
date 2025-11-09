@@ -4,15 +4,10 @@
 :root,
 ::after,
 ::before {
-    
-    /* Amber theme accents */
      --custom-color-accent-light: #FF8F00;
-    /* amber */
      --custom-color-accent-dark: #D17200;
-    /* deeper amber */
      --custom-color-accent-light-t: rgba(255, 143, 0, 0.5);
      --custom-color-accent-dark-t: rgba(209, 114, 0, 0.5);
      --custom-color-slider1: #FF8F00;
      --custom-color-slider2: #FFB347;
-    
 }

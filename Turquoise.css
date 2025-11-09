@@ -4,12 +4,8 @@
 :root,
 ::after,
 ::before {
-    
-    /* Turquoise theme accents */
      --custom-color-accent-light: #1ABC9C;
-    /* turquoise */
      --custom-color-accent-dark: #108C72;
-    /* deeper teal/turquoise */
      --custom-color-accent-light-t: rgba(26, 188, 156, 0.5);
      --custom-color-accent-dark-t: rgba(16, 140, 114, 0.5);
      --custom-color-slider1: #1ABC9C;

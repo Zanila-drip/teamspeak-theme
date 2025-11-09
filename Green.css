@@ -2,9 +2,8 @@
 @import url(Glassmorphism.css);
 
 :root, ::after, ::before {
-  /* Green theme accents */
-  --custom-color-accent-light: #30D158; /* iOS system green */
-  --custom-color-accent-dark: #20A647;  /* deeper green */
+  --custom-color-accent-light: #30D158;
+  --custom-color-accent-dark: #20A647;
   --custom-color-accent-light-t: rgba(48, 209, 88, 0.5);
   --custom-color-accent-dark-t: rgba(32, 166, 71, 0.5);
   --custom-color-slider1: #30D158;

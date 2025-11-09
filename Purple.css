@@ -2,9 +2,8 @@
 @import url(Glassmorphism.css);
 
 :root, ::after, ::before {
-  /* Purple theme accents */
-  --custom-color-accent-light: #BF5AF2; /* iOS system purple */
-  --custom-color-accent-dark: #8E44AD;  /* deep royal purple */
+  --custom-color-accent-light: #BF5AF2;
+  --custom-color-accent-dark: #8E44AD;
   --custom-color-accent-light-t: rgba(191, 90, 242, 0.5);
   --custom-color-accent-dark-t: rgba(142, 68, 173, 0.5);
   --custom-color-slider1: #BF5AF2;
