@@ -1,0 +1,19 @@
+@import url(TeamSpeak.css);
+@import url(Glassmorphism.css);
+
+:root,
+::after,
+::before {
+    
+    /* Cyan theme accents */
+     --custom-color-accent-light: #00C8FF;
+    /* bright cyan */
+     --custom-color-accent-dark: #0095C7;
+    /* deeper cyanish blue */
+     --custom-color-accent-light-t: rgba(0, 200, 255, 0.5);
+     --custom-color-accent-dark-t: rgba(0, 149, 199, 0.5);
+     --custom-color-slider1: #00C8FF;
+     --custom-color-slider2: #4BE3FF;
+    
+}
+

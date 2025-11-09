@@ -1,0 +1,19 @@
+@import url(TeamSpeak.css);
+@import url(Glassmorphism.css);
+
+:root,
+::after,
+::before {
+    
+    /* Coral theme accents */
+     --custom-color-accent-light: #FF6F61;
+    /* coral */
+     --custom-color-accent-dark: #E64B3C;
+    /* deeper coral red */
+     --custom-color-accent-light-t: rgba(255, 111, 97, 0.5);
+     --custom-color-accent-dark-t: rgba(230, 75, 60, 0.5);
+     --custom-color-slider1: #FF6F61;
+     --custom-color-slider2: #FF9B8F;
+    
+}
+
