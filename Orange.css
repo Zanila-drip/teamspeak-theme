@@ -2,11 +2,12 @@
 @import url(Glassmorphism.css);
 
 :root, ::after, ::before {
-  /* Yellow theme accents */
-  --custom-color-accent-light: #FFD60A; /* vivid sun yellow */
-  --custom-color-accent-dark: #FFB300;  /* deeper golden */
-  --custom-color-accent-light-t: rgba(255, 214, 10, 0.5);
-  --custom-color-accent-dark-t: rgba(255, 179, 0, 0.5);
-  --custom-color-slider1: #FFD60A;
-  --custom-color-slider2: #FFE67A;
+  /* Muted / dark orange (burnt amber) */
+  --custom-color-accent-light: #D97A18; /* mid burnt orange */
+  --custom-color-accent-dark: #AA5205;  /* deeper toasted */
+  --custom-color-accent-light-t: rgba(217, 122, 24, 0.5);
+  --custom-color-accent-dark-t: rgba(170, 82, 5, 0.5);
+  /* Sliders: pairing with a warm desaturated highlight */
+  --custom-color-slider1: #D97A18;
+  --custom-color-slider2: #E5A24E;
 }
