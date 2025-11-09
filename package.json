@@ -63,24 +63,6 @@
                 "apiVersion": 1
             },
             {
-                "name": "Reaper Yellow",
-                "source": "Yellow.css",
-                "image": "Yellow.png",
-                "apiVersion": 1
-            },
-            {
-                "name": "Reaper Lime",
-                "source": "Lime.css",
-                "image": "Lime.png",
-                "apiVersion": 1
-            },
-            {
-                "name": "Reaper Brown",
-                "source": "Brown.css",
-                "image": "Brown.png",
-                "apiVersion": 1
-            },
-            {
                 "name": "Reaper Cyan",
                 "source": "Cyan.css",
                 "image": "Cyan.png",
