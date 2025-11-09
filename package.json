@@ -35,43 +35,31 @@
             {
                 "name": "Reaper Pink",
                 "source": "Pink.css",
-                "image": "Reaper.png",
+                "image": "Pink.png",
                 "apiVersion": 1
             },
             {
                 "name": "Reaper Purple",
                 "source": "Purple.css",
-                "image": "Reaper.png",
+                "image": "Purple.png",
                 "apiVersion": 1
             },
             {
                 "name": "Reaper Yellow",
                 "source": "Yellow.css",
-                "image": "Reaper.png",
+                "image": "Yellow.png",
                 "apiVersion": 1
             },
             {
                 "name": "Reaper Lime",
                 "source": "Lime.css",
-                "image": "Reaper.png",
+                "image": "Lime.png",
                 "apiVersion": 1
             },
             {
                 "name": "Reaper Green",
                 "source": "Green.css",
-                "image": "Reaper.png",
-                "apiVersion": 1
-            },
-            {
-                "name": "Reaper Dark Green",
-                "source": "DarkGreen.css",
-                "image": "Reaper.png",
-                "apiVersion": 1
-            },
-            {
-                "name": "Reaper Brown",
-                "source": "Brown.css",
-                "image": "Reaper.png",
+                "image": "Green.png",
                 "apiVersion": 1
             }
         ]
