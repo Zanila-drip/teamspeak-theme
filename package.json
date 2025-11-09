@@ -25,6 +25,12 @@
                 "source": "Reaper.css",
                 "image": "Reaper.png",
                 "apiVersion": 1
+            },
+            {
+                "name": "Reaper Blue",
+                "source": "Blue.css",
+                "image": "Blue.png",
+                "apiVersion": 1
             }
         ]
     }
