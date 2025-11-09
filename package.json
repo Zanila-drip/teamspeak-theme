@@ -4,7 +4,7 @@
     "version": "1.2.0",
     "identifier": "neon.reaper.dark",
     "engines": {
-        "teamspeak": "1"
+        "teamspeak": 1
     },
     "repository": {
         "url": "https://github.com/AnthonyDac/reaper",
