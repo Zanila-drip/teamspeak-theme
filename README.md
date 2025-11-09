@@ -1,5 +1,7 @@
 # Reaper — Neon Dark + Glass
 
+![Aperçu du thème](Thumbnail.png)
+
 Un thème TeamSpeak sombre avec accents néon et effet "verre" (glassmorphism).
 
 ## Ce que ça fait (version courte)
