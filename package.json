@@ -59,43 +59,43 @@
             {
                 "name": "Reaper Cyan",
                 "source": "Cyan.css",
-                "image": "Reaper.png",
+                "image": "Cyan.png",
                 "apiVersion": 1
             },
             {
                 "name": "Reaper Indigo",
                 "source": "Indigo.css",
-                "image": "Reaper.png",
+                "image": "Indigo.png",
                 "apiVersion": 1
             },
             {
                 "name": "Reaper Magenta",
                 "source": "Magenta.css",
-                "image": "Reaper.png",
+                "image": "Magenta.png",
                 "apiVersion": 1
             },
             {
                 "name": "Reaper Amber",
                 "source": "Amber.css",
-                "image": "Reaper.png",
+                "image": "Amber.png",
                 "apiVersion": 1
             },
             {
                 "name": "Reaper Turquoise",
                 "source": "Turquoise.css",
-                "image": "Reaper.png",
+                "image": "Turquoise.png",
                 "apiVersion": 1
             },
             {
                 "name": "Reaper Silver",
                 "source": "Silver.css",
-                "image": "Reaper.png",
+                "image": "Silver.png",
                 "apiVersion": 1
             },
             {
                 "name": "Reaper Coral",
                 "source": "Coral.css",
-                "image": "Reaper.png",
+                "image": "Coral.png",
                 "apiVersion": 1
             }
         ]
