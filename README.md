@@ -25,3 +25,31 @@ Notes:
 - Sur machines modestes, diminuez `--glass-blur` pour de meilleures perfs.
 
 Licence: MIT.
+
+---
+
+# Reaper — Neon Dark + Glass (EN)
+
+Dark TeamSpeak theme with neon accents and a subtle “glass” (glassmorphism) effect.
+
+## What it does (short)
+- Dark base + accent colors (blue, pink, purple, orange, green, etc.).
+- Glass effect: blur + transparency + soft border on panels (if supported by your system).
+- Many ready-to-use variants: "Reaper Blue", "Reaper Magenta", "Reaper Indigo", and more.
+
+## Install / Use
+1) Download this folder (or the theme .zip).
+2) TeamSpeak → Settings → Appearance → Themes → Import (or copy the folder into TeamSpeak’s themes directory).
+3) Restart TeamSpeak if needed.
+4) In the list, pick your variant (e.g. "Reaper Blue").
+
+## Quick customize
+- Color: open the chosen variant (e.g. `Blue.css`) and tweak variables:
+  `--custom-color-accent-light`, `--custom-color-accent-dark` (+ `-t` versions), `--custom-color-slider1/2`.
+- Glass: in `Glassmorphism.css`, adjust `--glass-blur` (blur), `--glass-radius` (roundness), `--glass-bg` (transparency).
+
+Notes:
+- If `backdrop-filter` isn’t supported, a no-blur fallback is applied automatically.
+- On lower-end machines, reduce `--glass-blur` for better performance.
+
+License: MIT.
