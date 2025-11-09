@@ -1,0 +1,12 @@
+@import url(TeamSpeak.css);
+@import url(Glassmorphism.css);
+
+:root, ::after, ::before {
+  /* Pink theme accents */
+  --custom-color-accent-light: #FF2D55; /* iOS system pink */
+  --custom-color-accent-dark: #D81159;  /* deeper pink */
+  --custom-color-accent-light-t: rgba(255, 45, 85, 0.5);
+  --custom-color-accent-dark-t: rgba(216, 17, 89, 0.5);
+  --custom-color-slider1: #FF2D55;
+  --custom-color-slider2: #FF6FAE;
+}

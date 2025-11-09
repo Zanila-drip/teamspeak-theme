@@ -1,10 +1,10 @@
 {
-    "name": "Neon Reaper Dark Theme",
+    "name": "neon-reaper-dark-theme",
     "description": "A dark theme with neon accents for TeamSpeak.",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "identifier": "neon.reaper.dark",
     "engines": {
-        "teamspeak": 1
+        "teamspeak": "1"
     },
     "repository": {
         "url": "https://github.com/AnthonyDac/reaper",
@@ -30,6 +30,48 @@
                 "name": "Reaper Blue",
                 "source": "Blue.css",
                 "image": "Blue.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "Reaper Pink",
+                "source": "Pink.css",
+                "image": "Reaper.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "Reaper Purple",
+                "source": "Purple.css",
+                "image": "Reaper.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "Reaper Yellow",
+                "source": "Yellow.css",
+                "image": "Reaper.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "Reaper Lime",
+                "source": "Lime.css",
+                "image": "Reaper.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "Reaper Green",
+                "source": "Green.css",
+                "image": "Reaper.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "Reaper Dark Green",
+                "source": "DarkGreen.css",
+                "image": "Reaper.png",
+                "apiVersion": 1
+            },
+            {
+                "name": "Reaper Brown",
+                "source": "Brown.css",
+                "image": "Reaper.png",
                 "apiVersion": 1
             }
         ]

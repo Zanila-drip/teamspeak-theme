@@ -1,0 +1,12 @@
+@import url(TeamSpeak.css);
+@import url(Glassmorphism.css);
+
+:root, ::after, ::before {
+  /* Lime theme accents */
+  --custom-color-accent-light: #A8FF00; /* electric lime */
+  --custom-color-accent-dark: #78B700;  /* darker lime green */
+  --custom-color-accent-light-t: rgba(168, 255, 0, 0.5);
+  --custom-color-accent-dark-t: rgba(120, 183, 0, 0.5);
+  --custom-color-slider1: #A8FF00;
+  --custom-color-slider2: #CFFF4D;
+}
