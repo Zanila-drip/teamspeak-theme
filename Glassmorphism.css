@@ -1,0 +1,172 @@
+/*
+  Glassmorphism layer for Neon Reaper Dark
+  - Apple-like frosted glass surfaces (blur + translucency)
+  - Subtle borders and shadows for depth
+  - Tinted by theme accent variables already defined in TeamSpeak.css / Reaper.css
+*/
+
+:root,
+::before,
+::after {
+  /* Glass tunables */
+  --glass-blur: 16px;
+  --glass-saturation: 120%;
+  --glass-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --glass-radius: 12px;
+
+  /* Base glass palette (dark mode) */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-bg-strong: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.18);
+
+  /* Accent tint overlays */
+  --glass-tint: linear-gradient(135deg, var(--custom-color-accent-dark-t) 0%, rgba(255, 255, 255, 0) 60%);
+  --glass-tint-strong: linear-gradient(135deg, var(--custom-color-accent-light-t) 0%, rgba(255, 255, 255, 0) 70%);
+
+  /* Contextual glass colors */
+  --glass-bubble-bg: rgba(255, 255, 255, 0.04);
+  --glass-menu-bg: rgba(20, 20, 20, 0.35);
+}
+
+/* Prefer real blur if available, keep graceful fallback otherwise */
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  /* Side bar background */
+  .tsv-sidebar .tsv-body-background {
+    background: var(--glass-tint), var(--glass-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(var(--glass-blur));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(var(--glass-blur));
+    box-shadow: var(--glass-shadow);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius);
+  }
+
+  /* Headers / banners */
+  .tsv-view-banner .tsv-view-background,
+  .tsv-view-header,
+  .ts-server-header,
+  .ts-new-header-bg {
+    background: var(--glass-tint-strong), var(--glass-bg-strong) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    box-shadow: var(--glass-shadow);
+    border-bottom: 1px solid var(--glass-border);
+    border-radius: calc(var(--glass-radius) - 4px);
+  }
+
+  /* Dashboard panels */
+  .tsv-dashboard-servers__content,
+  .tsv-dashboard-chats,
+  .tsv-dashboard-news,
+  .ts-discovery-wrapper {
+    background: var(--glass-tint), var(--glass-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(var(--glass-blur));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(var(--glass-blur));
+    box-shadow: var(--glass-shadow);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius);
+  }
+
+  /* Cards and previews */
+  .tsv-card,
+  .tsv-preview,
+  .tsv-deviant,
+  .tsv-highlight-header {
+    background: var(--glass-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--glass-radius);
+  }
+
+  /* Chat input */
+  .ts-chat-input-container {
+    background-color: var(--glass-bg-strong) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.7));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.7));
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    border-radius: var(--glass-radius);
+  }
+  .ts-chat-input-container.focus,
+  .ts-chat-input-container:hover {
+    background-color: var(--glass-bg-strong) !important;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+    border-color: var(--custom-color-accent-light) !important;
+  }
+
+  /* Chat bubbles (non-highlighted states) */
+  .ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble {
+    background: var(--glass-bubble-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.6));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.6));
+    border: 1px solid var(--glass-border);
+    border-radius: calc(var(--glass-radius) - 4px);
+  }
+  .ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble::before {
+    border-right-color: var(--glass-bubble-bg) !important;
+  }
+
+  /* Attachments */
+  .ts-chat-message-attachment .ts-chat-message-attachment-inner {
+    background: var(--glass-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.5));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.5));
+    border-color: var(--glass-border) !important;
+    border-radius: calc(var(--glass-radius) - 2px);
+  }
+
+  /* Context menus */
+  .tsv-context-menu,
+  .ts-context-menu,
+  .menu,
+  .ts-tooltip {
+    background: var(--glass-menu-bg) !important;
+    -webkit-backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    backdrop-filter: saturate(var(--glass-saturation)) blur(calc(var(--glass-blur) * 0.8));
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: var(--glass-shadow);
+    border-radius: 10px;
+  }
+
+  /* Variables override for surfaces that rely on CSS custom props */
+  :root,
+  ::before,
+  ::after {
+    --tsv-context-menu-border: var(--glass-border) !important;
+    --ts-context-menu-background: var(--glass-menu-bg) !important;
+    --card-background: var(--glass-bg) !important;
+    --card-hover-background: var(--glass-bg-strong) !important;
+    --tsv-preview-bg: var(--glass-bg) !important;
+  }
+}
+
+/* Fallback (no backdrop-filter support): use slightly more opaque surfaces for readability */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .tsv-sidebar .tsv-body-background,
+  .tsv-view-banner .tsv-view-background,
+  .tsv-view-header,
+  .ts-server-header,
+  .ts-new-header-bg,
+  .tsv-dashboard-servers__content,
+  .tsv-dashboard-chats,
+  .tsv-dashboard-news,
+  .ts-discovery-wrapper,
+  .tsv-card,
+  .tsv-preview,
+  .tsv-deviant,
+  .tsv-highlight-header,
+  .ts-chat-input-container,
+  .ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble,
+  .ts-chat-message-attachment .ts-chat-message-attachment-inner,
+  .tsv-context-menu,
+  .ts-context-menu,
+  .menu,
+  .ts-tooltip {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+  }
+  .ts-chat-room-event-detailed:not(.ts-currently-referencing, .apparently-people-like-huge-faces) .ts-chat-room-event-bubble::before {
+    border-right-color: rgba(255, 255, 255, 0.08) !important;
+  }
+}

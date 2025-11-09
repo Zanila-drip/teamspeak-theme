@@ -1,4 +1,5 @@
 @import url(TeamSpeak.css);
+@import url(Glassmorphism.css);
 
 :root, ::after, ::before {
     --custom-color-accent-light: #e4052e;
