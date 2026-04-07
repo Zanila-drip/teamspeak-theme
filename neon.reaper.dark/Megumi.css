@@ -2,10 +2,10 @@
 @import url(Glassmorphism.css);
 
 :root, ::after, ::before {
-    --custom-color-accent-light: #F2D544;
-    --custom-color-accent-dark: #F2D544;
-    --custom-color-accent-light-t: rgba(228, 198, 5, 0.64);
-    --custom-color-accent-dark-t: rgba(228, 198, 5, 0.75);
-    --custom-color-slider1: #F2D544;
+    --custom-color-accent-light: #F9BA5D;
+    --custom-color-accent-dark: #72484E;
+    --custom-color-accent-light-t: #FDD8B8;
+    --custom-color-accent-dark-t: rgba(242, 213, 68, 0.25);
+    --custom-color-slider1: #ff0000;
     --custom-color-slider2: #F2D544;
 }
