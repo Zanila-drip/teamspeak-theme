@@ -1,0 +1,11 @@
+@import url(TeamSpeak.css);
+@import url(Glassmorphism.css);
+
+:root, ::after, ::before {
+    --custom-color-accent-light: #F2D544;
+    --custom-color-accent-dark: #F2D544;
+    --custom-color-accent-light-t: rgba(228, 198, 5, 0.64);
+    --custom-color-accent-dark-t: rgba(228, 198, 5, 0.75);
+    --custom-color-slider1: #F2D544;
+    --custom-color-slider2: #F2D544;
+}

@@ -97,6 +97,12 @@
                 "source": "Coral.css",
                 "image": "Coral.png",
                 "apiVersion": 1
+            },
+            {
+                "name": "Zanila Megumi",
+                "source": "Megumi.css",
+                "image": "Megumi.png",
+                "apiVersion": 1
             }
         ]
     }
